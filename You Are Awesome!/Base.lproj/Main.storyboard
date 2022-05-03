@@ -39,7 +39,7 @@
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                     </view>
                     <connections>
-                        <outlet property="messageLabel" destination="bb6-iF-QtM" id="Wrx-my-QBN"/>
+                        <outlet property="myMessage" destination="bb6-iF-QtM" id="95g-xK-SWU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
