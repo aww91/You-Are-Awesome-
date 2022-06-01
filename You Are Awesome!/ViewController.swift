@@ -17,10 +17,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
+    
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-        myMessage.text = "You Are Awesome!"
-        imageView.image = UIImage(named: "image0")
+        
+        
+        if myMessage.text == "You Are Awesome!" {
+            myMessage.text = "You Are Great!"
+            imageView.image = UIImage(named: "image1")
+        } else {
+            myMessage.text = "You Are Awesome!"
+            imageView.image = UIImage(named: "image0")
+        }
     }
     
 }
