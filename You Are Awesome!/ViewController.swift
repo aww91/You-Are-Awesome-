@@ -23,21 +23,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-        // Recycle Through Messages
-        if messageCount == messages.count {
-            messageCount = 0
-        }
-        myMessage.text = messages[messageCount]
-        messageCount += 1
+        let awesomeMessage = "You are Awesome!"
+        let greatMessage = "You are Great!"
+        let bombMessage = "You Are Da Bomb"
         
-        // Recycle Through Images
-        if imageCount == 9 {
-            imageCount = 1
+        if myMessage.text == awesomeMessage{
+            myMessage.text = greatMessage
+            imageView.image = UIImage(named: "image1")
+            
+        } else if myMessage.text == greatMessage {
+            myMessage.text = bombMessage
+            imageView.image = UIImage(named: "image2")
+            
         }
-        imageView.image = UIImage(named: "image\(imageCount)")
-        imageCount += 1
-        
-    
+            else {
+                myMessage.text = awesomeMessage
+                imageView.image = UIImage(named: "image0")
+            }
     }
     
 }
