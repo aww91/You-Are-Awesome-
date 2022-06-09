@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var messages = ["You Are Awesome!", "You Are Great!", "You Are Da Bomb!", "You Are Fantastic!"]
+    var messages = ["You Are Awesome!!", "You Are Great!", "You Are Da Bomb!", "You Are Fantastic!"]
     var messageCount = 0
     
     var imageCount = 1
