@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var myMessage: UILabel!
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     var messageCount = 0
     var imageCount = 1
     let totalNumberOfImages = 9
+    var audioPlayer: AVAudioPlayer!
     
     var messages = ["You Are Awesome!!",
                     "You Are Great!",
@@ -50,7 +52,18 @@ class ViewController: UIViewController {
         }
         imageView.image = newImageView
         
-    
+    //Play Sounds
+        if let sound = NSDataAsset(name: "sound1"){
+            do {
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            } catch{
+                print("ERROR: \(error.localizedDescription) Could not initialize AVAudioPlayer object.")
+            }
+           
+        }else{
+            print("ERROR: Could not read data from file sound1")
+        }
 
    }
     
