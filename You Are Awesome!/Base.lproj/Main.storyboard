@@ -30,19 +30,37 @@
                                         <rect key="frame" x="31" y="171" width="344" height="587"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI5-J6-GRm">
-                                        <rect key="frame" x="115" y="126" width="161" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="GI5-J6-GRm">
+                                        <rect key="frame" x="258" y="137" width="127" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show Message">
-                                            <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODU-T8-ebc"/>
                                         </connections>
                                     </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MOM-et-0Zd">
+                                        <rect key="frame" x="88" y="135" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="playSoundToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="mZu-U2-Byc"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Play Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gak-zB-A1S">
+                                        <rect key="frame" x="3" y="142" width="77" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GI5-J6-GRm" secondAttribute="trailing" constant="5" id="6s5-nw-eoP"/>
+                                    <constraint firstItem="Gak-zB-A1S" firstAttribute="leading" secondItem="NOI-n9-RJp" secondAttribute="leading" constant="5" id="v9H-Tr-8KV"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,6 +75,7 @@
                     <connections>
                         <outlet property="imageView" destination="Mn9-Dw-lJb" id="8v1-nG-Erq"/>
                         <outlet property="myMessage" destination="bb6-iF-QtM" id="95g-xK-SWU"/>
+                        <outlet property="playSoundSwitch" destination="MOM-et-0Zd" id="PZj-Mi-OPR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
